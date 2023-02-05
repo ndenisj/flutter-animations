@@ -1,5 +1,8 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter_animations/screens/animated_builder_transform.dart';
+import 'package:flutter_animations/screens/chained_animations.dart';
 
 void main() {
   runApp(const MyApp());
@@ -52,6 +55,18 @@ class _MyHomePageState extends State<MyHomePage> {
                 );
               },
               child: Text("Animated Builder & Transform"),
+            ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ChainedAnimations(),
+                  ),
+                );
+              },
+              child: Text("Chained Animations"),
             ),
           ],
         ),
