@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animations/screens/animated_builder_transform.dart';
 import 'package:flutter_animations/screens/chained_animations.dart';
+import 'package:flutter_animations/screens/cube_3d_animation.dart';
+import 'package:flutter_animations/screens/hero_animation.dart';
 
 void main() {
   runApp(const MyApp());
@@ -56,7 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               child: Text("Animated Builder & Transform"),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 10),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
@@ -67,6 +69,30 @@ class _MyHomePageState extends State<MyHomePage> {
                 );
               },
               child: Text("Chained Animations"),
+            ),
+            SizedBox(height: 10),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Cube3dAnimation(),
+                  ),
+                );
+              },
+              child: Text("3D Cube Animations"),
+            ),
+            SizedBox(height: 10),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => HeroAnimation(),
+                  ),
+                );
+              },
+              child: Text("Hero Animations"),
             ),
           ],
         ),
