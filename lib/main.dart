@@ -5,6 +5,7 @@ import 'package:flutter_animations/screens/animated_builder_transform.dart';
 import 'package:flutter_animations/screens/chained_animations.dart';
 import 'package:flutter_animations/screens/cube_3d_animation.dart';
 import 'package:flutter_animations/screens/hero_animation.dart';
+import 'package:flutter_animations/screens/implicit_animation.dart';
 
 void main() {
   runApp(const MyApp());
@@ -93,6 +94,18 @@ class _MyHomePageState extends State<MyHomePage> {
                 );
               },
               child: Text("Hero Animations"),
+            ),
+            SizedBox(height: 10),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ImplicitAnimation(),
+                  ),
+                );
+              },
+              child: Text("Implicit Animations"),
             ),
           ],
         ),
